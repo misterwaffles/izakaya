@@ -32,9 +32,9 @@ Use your best judgment to determine how specific to make your CSS selectors. If 
 Let's say you have the following structure:
 
 <code>
-	<div>
-		<p class="content"> ... </p>
-	</div>
+	div
+		p class="content"
+	end div
 </code>
 
 If the content class above is reused often, it would be better to select css as follows:
