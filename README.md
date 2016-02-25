@@ -32,21 +32,25 @@ Use your best judgment to determine how specific to make your CSS selectors. If 
 Let's say you have the following structure:
 
 <code>
-<div>
-	<p class="content"> ... </p>
-</div>
-<code>
+	<div>
+		<p class="content"> ... </p>
+	</div>
+</code>
 
 If the content class above is reused often, it would be better to select css as follows:
 
+<code>
 .content {
-
+	...
 }
+</code>
 
 rather than
 
+<code>
 div .content {
-
+	...
 } 
+</code>
 
 The latter only targets the content class when it's contained within a div (which might not always be the case). This is one of the most common sources of error with CSS.
