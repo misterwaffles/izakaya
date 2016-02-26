@@ -10,4 +10,13 @@ body {
 nav {
 	font-family: helvetica-bold;
 	text-transform: uppercase;
+	position:fixed; 
+}
+
+nav {
+	a {
+	color: white; 
+	margin-right:5%;
+	margin-left: 5%;
+	}
 }
