@@ -11,6 +11,7 @@ body {
 nav {
 	font-family: helvetica-bold;
 	text-transform: uppercase;
+	position:fixed; 
 }
 
 .footer-gradient {
@@ -47,4 +48,12 @@ footer {
 	margin: 10px 10%;
 	height: 1px;
 	background: $separator-color;
+}
+
+nav {
+	a {
+	color: $nav-text-color; 
+	margin-right:5%;
+	margin-left: 5%;
+	}
 }
