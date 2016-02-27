@@ -12,6 +12,14 @@ nav {
 	font-family: helvetica-bold;
 	text-transform: uppercase;
 	position:fixed; 
+	display:flex;
+	justify-content:space-between; 
+}
+
+nav {
+	a {
+	color: $nav-text-color; 
+	}
 }
 
 .footer-gradient {
@@ -50,10 +58,3 @@ footer {
 	background: $separator-color;
 }
 
-nav {
-	a {
-	color: $nav-text-color; 
-	margin-right:5%;
-	margin-left: 5%;
-	}
-}
