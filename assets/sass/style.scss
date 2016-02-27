@@ -16,12 +16,34 @@ nav {
 	justify-content:space-between; 
 }
 
+header {
+	padding: 7px 0;
+}
+
 nav {
+	margin-top: 3px;
 	a {
 	color: $nav-text-color; 
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin: 3px 0;
+	padding: 5px 10px;
+	border: 2px solid rgba(0,0,0,0);
+	-webkit-transition: all 0.43s;
+    transition: all 0.43s;
 	}
+
+	a:hover {
+		text-decoration: none;
+		color: $nav-text-color;
+		border-color: $nav-text-color;
+
+	}
+}
+
+.logo img {
+	display: block;
+	margin: 0 auto;
+	height: 23px;
+	width: 149px;
 }
 
 .footer-gradient {
