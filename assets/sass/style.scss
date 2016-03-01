@@ -4,6 +4,7 @@
 @import 'fonts';
 
 body {
+	font-family: Helvetica, helvetica-med, sans-serif;
 	background: $bg-color;
 	color: $text-color;
 }
@@ -21,15 +22,72 @@ h3 {
 }
 
 h4 {
-	position: absolute; 
-	bottom: 0;
-	margin-left:40%; 
+
+	&.ourstory {
+		position: absolute; 
+		display: block;
+		bottom: 0;
+		text-align: center;
+		left: 0;
+		right: 0;
+		padding: 5px;
+
+		background-color: rgba(0,0,0,0.6);
+	}
+
+
+}
+
+.row.no-pad {
+  margin-right:0;
+  margin-left:0;
+}
+.row.no-pad > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
 }
 
 b {
 	color: $text-color;
 }
 
+
+.tagline{
+	position: relative;
+	top: 150px;	
+	margin-left: 20px;
+	font-size: 40px;
+}
+
+.category-content {
+	display: none;
+	height: 0;
+}
+
+
+.item {
+	position: relative;
+	text-align: left;
+	.item-name {
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.item-desc {
+		font-weight: light;
+	}
+
+	.item-price {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-top: -10px;
+
+	}
+}
+
+
+
+//--------------------------
 .section-header {
 	text-align: center;
 	margin-bottom: 30px;
@@ -74,6 +132,9 @@ nav {
 
 header {
 	padding: 7px 0;
+		position: relative;
+	z-index: 100000;
+
 }
 
 nav {
@@ -132,9 +193,19 @@ nav {
 		margin: 10px;
 	}
 
-	> .first {
-		margin: 0 -20px;
+	> .row-fluid {
+		margin: 0 !important;
 	}
+
+	> .first {
+		margin: 0 -15px;
+	}
+
+	&.home {
+		margin-top: 90vh;
+	}
+
+
 
 }
 
@@ -182,17 +253,17 @@ footer {
 	background: $separator-color;
 }
 
-.home {
-	background: url("http://placehold.it/1080x1920") no-repeat center center;
+.home-hero {
+	position: absolute;
+	width: 100%;
+	padding: 0;
+	top: 0;
+	background: url("../img/home-hero.jpg") no-repeat center center;
 	background-size: cover;
 	height:100vh; 
 }
 
-.tagline{
-	position: relative;
-	top: 100px;
-	font-size:x-large;
-}
+
 
 .contact {
 	background: url("http://placehold.it/1400x1000") no-repeat center center;
@@ -220,19 +291,128 @@ footer {
 	font-size: 90%;
 }
 
-.category {
+
+
+.category-img:before { //allows centering vertically
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.category-img {
 	background: url("http://placehold.it/700x500");
 	width: 100%;
 	height: 90px; 
 	border-top: 1px solid white; 
 	border-bottom: 1px solid white;
 	text-align: center; 
+
+	&.appetizers {
+		background: url("../img/menu-appetizers.png") no-repeat center center;
+		background-size: cover;
+	}
+	&.drinks {
+		background: url("../img/menu-drinks.png") no-repeat center center;
+		background-size: cover;
+	}
+	&.salad {
+		background: url("../img/menu-salad.png") no-repeat center center;
+		background-size: cover;
+	}
+	&.tapas {
+		background: url("../img/menu-tapas.png") no-repeat center center;
+		background-size: cover;
+	}
+	&.yakitori {
+		background: url("../img/menu-yakitori.png") no-repeat center center;
+		background-size: cover;
+	}
+	&.dessert {
+		background: url("../img/menu-dessert.png") no-repeat center center;
+		background-size: cover;
+	}
+
 }
 
 .category-label {
-	line-height: 100px; 
+	display: inline-block;
+	vertical-align: middle;
+	text-shadow: 1px 1px black;
 	border: 3px solid white; 
 	padding: 4px 25px;
 	font-family: helvetica-med;
 	font-size: 120%;
+	width: 150px;
 }
+
+
+
+
+//------------- ACCORDION MENU
+@charset "UTF-8";
+/* Base Styles */
+#cssmenu,
+#cssmenu ul,
+#cssmenu li,
+#cssmenu a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  position: relative;
+}
+#cssmenu a {
+  line-height: 1.3;
+}
+#cssmenu {
+  width: 100%;
+}
+#cssmenu > ul > li > a {
+  display: block;
+  background: $menu-color;
+  color: $nav-text-color;
+  border-bottom: 1px solid $text-color;
+  text-transform: uppercase;
+}
+#cssmenu > ul > li > a > span {
+  background: $menu-color;
+  padding: 10px;
+  display: block;
+  font-size: 13px;
+  font-weight: 300;
+}
+#cssmenu > ul > li > a:hover {
+  text-decoration: none;
+}
+
+#cssmenu span.cnt {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+/* Sub menu */
+#cssmenu ul ul {
+  display: none;
+}
+#cssmenu ul ul li {
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 0;
+}
+#cssmenu ul ul a {
+  padding: 20px;
+  display: block;
+  color: $text-color;
+  background: $menu-color;
+  font-size: 13px;
+  cursor: default;
+}
+
