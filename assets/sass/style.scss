@@ -236,3 +236,9 @@ footer {
 	font-family: helvetica-med;
 	font-size: 120%;
 }
+
+@media screen and (max-width: 992px) {
+	.map {
+		display: none; 
+	}
+}
