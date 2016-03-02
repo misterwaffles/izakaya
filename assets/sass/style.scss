@@ -1,5 +1,5 @@
 //this file will be compiled to css/style.css
-
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 @import 'colors';
 @import 'fonts';
 
@@ -25,7 +25,7 @@ h4 {
 
 	&.ourstory {
 		position: absolute; 
-		display: block;
+		display: inline-block;
 		bottom: 0;
 		text-align: center;
 		left: 0;
@@ -54,9 +54,14 @@ b {
 
 .tagline{
 	position: relative;
+	display: inline-block;
+	font-family: 'Source Sans Pro';
 	top: 150px;	
 	margin-left: 20px;
 	font-size: 40px;
+	background: rgba(0,0,0,0.65);
+	padding: 30px;
+	margin: 0;
 }
 
 .category-content {
@@ -489,6 +494,16 @@ nav {
 		float: left;
 		height: 29px;
 		width: 186px;
+	}
+	.home-hero {
+		text-align: center;
+	}
+	.tagline {
+		display: inline-block;
+		position: relative;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
 	}
 
 }
