@@ -22,30 +22,54 @@ h3 {
 }
 
 h4 {
-
-	&.ourstory {
-		position: absolute; 
-		display: inline-block;
-		bottom: 0;
-		text-align: center;
-		left: 0;
-		right: 0;
-		padding: 5px;
-
-		background-color: rgba(0,0,0,0.6);
-	}
-
-
+	position: absolute;
+	width: 100%;
+	color: $text-color; 
+	bottom: 0;
+	display: block;
+	text-align: center;
 }
 
 .row.no-pad {
   margin-right:0;
   margin-left:0;
 }
+
 .row.no-pad > [class*='col-'] {
   padding-right:0;
   padding-left:0;
 }
+
+.our-story {
+	
+
+
+
+	a {
+		text-decoration: none;
+		color: $text-color;
+	}
+	a:hover {
+		text-decoration: none;
+		color: $text-color;
+	}
+}
+
+.about {
+
+	h2 {
+		text-align: left;
+		font-size: x-large;
+	}
+
+	p {
+		color: $text-color;
+		text-align: center;
+	}
+
+
+}
+
 
 b {
 	color: $text-color;
@@ -226,6 +250,7 @@ nav {
 
 }
 
+
 .hero.specials {
 	background: url("../img/specials-hero.jpg") no-repeat center center;
 	background-size: cover;
@@ -271,7 +296,7 @@ footer {
 }
 
 .home-hero {
-	position: absolute;
+	position: relative;
 	width: 100%;
 	padding: 0;
 	top: 0;
@@ -293,6 +318,7 @@ footer {
 		float: right;
 	}
 }
+
 
 
 
