@@ -10,7 +10,7 @@ body {
 }
 h2 {
 	color: $h2-text-color;
-	font-family: sensory, helvetica-med, sans-serif;
+	font-family: helvetica-bold, sans-serif;
 	text-transform: uppercase;
 }
 
@@ -97,7 +97,6 @@ b {
 
 //--------------------------
 .section-header {
-	text-align: center;
 	margin-bottom: 30px;
 
 	> * {
@@ -110,14 +109,18 @@ b {
 	}
 }
 
+.specials-row {
+}
 .weekly-special {
 	height: 150px;
 	overflow: scroll;
 	margin-bottom: 30px;
+	margin-right: 30px;
 	border: 1px solid $subtitle-text-color;
 
 	img {
 		float: left;
+		margin-left: -15px;
 	}
 	.special-desc {
 		margin-left: 160px;
@@ -224,7 +227,7 @@ nav {
 }
 
 .hero.specials {
-	background: url("http://placehold.it/1400x1000") no-repeat center center;
+	background: url("../img/specials-hero.jpg") no-repeat center center;
 	background-size: cover;
 }
 
@@ -275,6 +278,20 @@ footer {
 	background: url("../img/home-hero.jpg") no-repeat center center;
 	background-size: cover;
 	height:100vh; 
+}
+
+.happy-hour {
+	position: relative;
+	max-width: 500px;
+	margin-bottom: 100px;
+
+	.key {
+		float: left;
+	}
+	
+	.value {
+		float: right;
+	}
 }
 
 
