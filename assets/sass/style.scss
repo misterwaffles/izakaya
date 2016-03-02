@@ -283,7 +283,7 @@ footer {
 }
 
 .menuhero {
-	background: url("http://placehold.it/1400x1000") no-repeat center center;
+	background: url("../img/menu-hero.jpg") no-repeat center center;
 	background-size: cover;
 }
 
@@ -404,8 +404,8 @@ footer {
   display: none;
 }
 #cssmenu ul ul li {
+	margin: 0;
   border-bottom: 1px solid #e0e0e0;
-  border-top: 0;
 }
 #cssmenu ul ul a {
   padding: 20px;
@@ -420,4 +420,70 @@ footer {
 	.map {
 		display: none; 
 	}
+
+}
+
+@media (min-width: 768px) {
+	.category-img {
+		height: 150px;
+	}
+
+	#cssmenu {
+		width: 75%;
+		margin: 0 auto;
+	}
+
+	.instructions {
+		text-align: center;
+	}
+
+	#cssmenu ul ul li {
+		display: inline-block;
+		width: 49%;
+	}
+
+
+header {
+	padding: 7px 0;
+		position: relative;
+	z-index: 100000;
+
+}
+
+nav {
+	float: right;
+	display: inline-block;
+	position: relative;
+	justify-content: none;
+	margin-top: 7px;
+	margin-right: 20px;
+
+	a {
+	color: $nav-text-color; 
+	margin: 3px 0;
+	padding: 5px 10px;
+	border: 2px solid rgba(0,0,0,0);
+	-webkit-transition: all 0.15s;
+    transition: all 0.15s;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: $nav-text-color;
+		border-color: $nav-text-color;
+
+	}
+}
+	.logo {
+		display: inline-block;
+		margin-left: 20px;
+	}
+
+	.logo img {
+		display: block;
+		float: left;
+		height: 29px;
+		width: 186px;
+	}
+
 }
