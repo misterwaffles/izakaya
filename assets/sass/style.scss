@@ -1,5 +1,5 @@
 //this file will be compiled to css/style.css
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
 @import 'colors';
 @import 'fonts';
 
@@ -167,8 +167,9 @@ nav {
 }
 
 .hero {
+	margin-top: 75px;
 	height: 250px;
-	background: pink;
+
 }
 
 .hero-container {
@@ -276,7 +277,7 @@ footer {
 
 
 .contact {
-	background: url("http://placehold.it/1400x1000") no-repeat center center;
+	background: url("../img/exterior.jpg") no-repeat center center;
 	background-size: cover;
 }
 .contact-content {
@@ -504,6 +505,11 @@ nav {
 		margin: 0 auto;
 		left: 0;
 		right: 0;
+	}
+
+	.hero {
+		margin-top: 45px;
+		height: 350px;
 	}
 
 }
