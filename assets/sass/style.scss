@@ -134,8 +134,11 @@ nav {
 
 header {
 	padding: 7px 0;
-		position: relative;
 	z-index: 100000;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-shadow: 0px 2px 10px rgba(0,0,0,0.7);
 
 }
 
@@ -447,8 +450,8 @@ footer {
 
 header {
 	padding: 7px 0;
-		position: relative;
 	z-index: 100000;
+
 
 }
 
