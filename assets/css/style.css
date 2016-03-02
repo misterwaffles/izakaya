@@ -26,9 +26,26 @@ h3 {
   font-size: 20px; }
 
 h4 {
+  color: #F1F1F1;
   position: absolute;
   bottom: 0;
   margin-left: 40%; }
+
+.our-story h4 {
+  text-align: center; }
+.our-story a {
+  text-decoration: none;
+  color: #F1F1F1; }
+.our-story a:hover {
+  text-decoration: none;
+  color: #F1F1F1; }
+
+.about h2 {
+  text-align: left;
+  font-size: x-large; }
+.about p {
+  color: #F1F1F1;
+  text-align: center; }
 
 b {
   color: #F1F1F1; }
@@ -155,8 +172,9 @@ footer {
 
 .tagline {
   position: relative;
-  top: 100px;
-  font-size: x-large; }
+  top: 50px;
+  font-size: x-large;
+  font-weight: bold; }
 
 .contact {
   background: url("http://placehold.it/1400x1000") no-repeat center center;

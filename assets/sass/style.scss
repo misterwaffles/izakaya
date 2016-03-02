@@ -21,9 +21,38 @@ h3 {
 }
 
 h4 {
+	color: $text-color;
 	position: absolute; 
 	bottom: 0;
-	margin-left:40%; 
+	margin-left:40%;
+}
+
+.our-story {
+	h4 {
+		text-align: center;
+	}
+
+	a {
+		text-decoration: none;
+		color: $text-color;
+	}
+	a:hover {
+		text-decoration: none;
+		color: $text-color;
+	}
+}
+
+.about {
+
+	h2 {
+		text-align: left;
+		font-size: x-large;
+	}
+
+	p {
+		color: $text-color;
+		text-align: center;
+	}
 }
 
 b {
@@ -138,6 +167,7 @@ nav {
 
 }
 
+
 .hero.specials {
 	background: url("http://placehold.it/1400x1000") no-repeat center center;
 	background-size: cover;
@@ -190,8 +220,9 @@ footer {
 
 .tagline{
 	position: relative;
-	top: 100px;
+	top: 50px;
 	font-size:x-large;
+	font-weight:bold;
 }
 
 .contact {
