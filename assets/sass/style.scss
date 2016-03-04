@@ -1,5 +1,5 @@
 //this file will be compiled to css/style.css
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200);
 @import 'colors';
 @import 'fonts';
 
@@ -9,7 +9,9 @@ html {
 
 body {
 	font-family: 'Source Sans Pro', helvetica-med, sans-serif;
-	background: $bg-color;
+	//background: $bg-color;
+	background: url('../img/asfalt.png');
+	background-repeat: repeat;
 	color: $text-color;
 	text-shadow: black 1px 1px;
 	font-size: 1rem;
@@ -17,14 +19,12 @@ body {
 
 h2 {
 	color: $h2-text-color;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: helvetica-bold, sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
-
-	&.question {
-		background: gray;
-		padding: 30px;
-	}
+	letter-spacing: 5px;
+	font-size: 0.9rem !important;
+	text-align: center;
 }
 
 h3 {
@@ -65,12 +65,27 @@ h4 {
 	}
 }
 
+.picture-about {
+	height: 400px;
+	width: 400px;
+	background: url('../img/interior.jpg') center center;
+	background-size: cover;
+	float: left;
+	margin-right: 30px;
+}
+
+.logo-about {
+	display: block;
+	width: 350px;
+	height: auto;
+	margin: 0 auto;
+}
+
 .about {
-	max-width: 500px;
-	margin: 0 auto;	
+	max-width: 800px;
+	margin: 30px auto;	
 
 	h2 {
-		font-size: x-large;
 		padding: 10px;
 	}
 
@@ -493,6 +508,10 @@ footer {
 }
 
 @media (min-width: 768px) {
+	.logo-about {
+		width: 435px;
+		height: auto;
+	}
 	.category-img {
 		height: 150px;
 	}
