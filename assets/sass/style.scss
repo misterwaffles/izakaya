@@ -113,9 +113,10 @@ b {
 	top: 150px;	
 	margin-left: 20px;
 	font-size: 40px;
-	background: rgba(0,0,0,0.65);
 	padding: 30px;
 	margin: 0;
+	width: 100%;
+	height: auto;
 }
 
 .category-content {
@@ -195,17 +196,43 @@ nav {
 }
 
 header {
-	padding: 7px 0;
+	height: 65px;
 	z-index: 100000;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	box-shadow: 0px 2px 10px rgba(0,0,0,0.7);
 
+	.logo {
+		display: inline-block;
+		vertical-align: middle;
+
+		&:hover img {
+			width: 52px;
+			height: auto;
+
+		}
+	}
+	img {
+		width: 50px;
+		height: auto;
+		margin-top: 100px;
+		box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+		-webkit-transition: all 0.15s;
+    	transition: all 0.15s;
+		
+
+	}
+
+
+
 }
 
 nav {
+	display: inline-block;
 	margin-top: 3px;
+	font-size: 0.8rem;
+	line-height: 35px;
 	a {
 	color: $nav-text-color; 
 	margin: 3px 0;
@@ -253,8 +280,7 @@ nav {
 .logo img {
 	display: block;
 	margin: 0 auto;
-	height: 23px;
-	width: 149px;
+
 }
 .content {
 	> .row {
@@ -327,7 +353,7 @@ footer {
 	width: 100%;
 	padding: 0;
 	top: 0;
-	background: url("../img/home-hero.jpg") no-repeat center center;
+	background: url("../img/home-hero-3.png") no-repeat center center;
 	background-size: cover;
 	height:100vh; 
 }
@@ -570,8 +596,6 @@ nav {
 	.logo img {
 		display: block;
 		float: left;
-		height: 29px;
-		width: 186px;
 	}
 	.home-hero {
 		text-align: center;
@@ -582,6 +606,8 @@ nav {
 		margin: 0 auto;
 		left: 0;
 		right: 0;
+			height: 400px;
+	width: auto;
 	}
 
 	.hero {
