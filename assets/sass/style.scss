@@ -21,6 +21,7 @@ body {
 h5 {
 	font-size: 1.2rem;
 	font-weight: bold;
+	color: $nav-text-color;
 }
 
 nav {
@@ -80,11 +81,37 @@ nav {
 	}
 }
 
-.home-hero {
-	height:100vh; /* makes the image take up the whole screen */
+.gradient {
+	background: $gradient-pink; //for browsers that don't support gradients
+	background: -webkit-linear-gradient(left, $gradient-pink , $gradient-purple); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, $gradient-pink, $gradient-purple); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, $gradient-pink, $gradient-purple); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, $gradient-pink, $gradient-purple); /* Standard syntax */
+}
+
+.tagline{
+	position: relative;
+	top: 150px;
+	height: 400px;
+	width: auto;
+	padding: 15px;
+}
+
+.hero {
+	margin-top: 68px;
+	height: 350px;
+	width: 100%;
 	text-align: center;
-	background: url("../img/home-hero-5-dark.png") no-repeat center center;
-	background-size: cover;
+}
+
+.home-hero {
+	height:100vh !important; /* makes the image take up the whole screen */
+	margin-top: 0 !important;
+	background: url("../img/home-hero-5-darker.png") center center/cover no-repeat;
+}
+
+.menu-hero {
+	background: url("../img/menu-hero.png") center center/cover no-repeat;
 }
 
 .explore {
@@ -109,6 +136,99 @@ nav {
 .row.no-pad {
   margin-right:0;
   margin-left:0;
+}
+
+#accordion-menu,
+#accordion-menu ul,
+#accordion-menu li,
+#accordion-menu a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  position: relative;
+}
+
+#accordion-menu a {
+  line-height: 1.3;
+}
+#accordion-menu {
+	width: 75%;
+	margin: 0 auto;
+}
+#accordion-menu > ul > li > a {
+  display: block;
+  background: $menu-color;
+  color: $nav-text-color;
+  border-bottom: 1px solid $text-color;
+  text-transform: uppercase;
+}
+#accordion-menu > ul > li > a > span {
+  background: $menu-color;
+  padding: 10px;
+  display: block;
+  font-size: 13px;
+  font-weight: 300;
+}
+#accordion-menu > ul > li > a:hover {
+  text-decoration: none;
+}
+
+#accordion-menu span.cnt {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+/* Sub menu */
+#accordion-menu ul ul {
+  display: none;
+}
+
+#accordion-menu ul ul li {
+	margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+	display: inline-block;
+	width: 49%;
+}
+#accordion-menu ul ul a {
+  padding: 20px;
+  display: block;
+  color: $text-color;
+  background: $menu-color;
+  font-size: 13px;
+  cursor: default;
+}
+
+footer {
+	margin-top: 100px;
+	padding-bottom: 50px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: auto;
+	}
+
+	.footer-content {
+		margin-top: 25px;
+		border: 3px solid white;
+
+		.res {
+			font-size: 0.8rem;
+		}
+	}
 }
 
 @media (max-width: 768px) {
@@ -147,35 +267,35 @@ nav {
 		}
 	}
 
+	.tagline {
+		width: 100%;
+		height: auto;
+	}
+
+	.hero {
+		margin-top: 70px	;
+		height: 275px;
+	}
+
+	#accordion-menu {
+		width: 100%;
+		margin: 0;
+	}
+
+	#accordion-menu ul ul li {
+		width: 100%;
+	}
+
 }
+
+
 
 //--------------------- REFACTORED ABOVE -----------------
 
 
 
 
-footer {
-	padding-bottom: 50px;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	overflow: hidden;
 
-	img {
-		position: absolute;
-		left: 0;
-		width: 100%;
-		height: auto;
-	}
-
-	.footer-content {
-		margin-top: 25px;
-		border: 3px solid white;
-
-		.res {
-			font-size: 0.8rem;
-		}
-	}
-}
 
 
 
@@ -211,11 +331,6 @@ h3 {
 	font-size: 20px;
 }
 
-
-
-
-
-
 .picture-about {
 	height: 400px;
 	width: 400px;
@@ -233,7 +348,7 @@ h3 {
 }
 
 .about {
-	max-width: 800px;
+	//max-width: 800px;
 	margin: 30px auto;
 
 	h2 {
@@ -255,18 +370,9 @@ b {
 
 
 
-.tagline{
-	position: relative;
-	display: inline-block;
-	font-family: 'Source Sans Pro';
-	top: 150px;
-	margin-left: 20px;
-	font-size: 40px;
-	padding: 30px;
-	margin: 0;
-	width: 100%;
-	height: auto;
-}
+
+
+
 
 .category-content {
 	display: none;
@@ -335,35 +441,6 @@ b {
 
 
 
-
-
-.hero {
-	margin-top: 75px;
-	height: 250px;
-
-}
-
-.hero-container {
-	background: url('http://img07.deviantart.net/e2dd/i/2013/110/1/3/free_mobile_app_background_by_diamonddew123-d62fu70.png');
-	background-size: cover;
-  	width:100%;
-  	height: 1000px;
-  	position:relative;
-}
-
-.hero-container {
-
-	h1 {
-		position: relative;
-		top: 50px;
-	}
-	h3 {
-		margin-left:40%;
-		position:absolute;
-		bottom: 0;
-	}
-}
-
 .logo img {
 	display: block;
 	margin: 0 auto;
@@ -402,13 +479,7 @@ b {
 	margin-bottom: 25px;
 }
 
-.gradient {
-	background: $gradient-pink; //for browsers that don't support gradients
-	background: -webkit-linear-gradient(left, $gradient-pink , $gradient-purple); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(right, $gradient-pink, $gradient-purple); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(right, $gradient-pink, $gradient-purple); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to right, $gradient-pink, $gradient-purple); /* Standard syntax */
-}
+
 
 
 
@@ -467,10 +538,7 @@ b {
 	}
 }
 
-.menuhero {
-	background: url("../img/menu-hero-2.png") no-repeat center center;
-	background-size: cover;
-}
+
 
 .instructions {
 	font-size: 90%;
@@ -535,78 +603,7 @@ b {
 
 
 //------------- ACCORDION MENU
-@charset "UTF-8";
 /* Base Styles */
-#cssmenu,
-#cssmenu ul,
-#cssmenu li,
-#cssmenu a {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  list-style: none;
-  font-weight: normal;
-  text-decoration: none;
-  line-height: 1;
-  font-family: Helvetica, sans-serif;
-  font-size: 14px;
-  position: relative;
-}
-#cssmenu a {
-  line-height: 1.3;
-}
-#cssmenu {
-  width: 100%;
-}
-#cssmenu > ul > li > a {
-  display: block;
-  background: $menu-color;
-  color: $nav-text-color;
-  border-bottom: 1px solid $text-color;
-  text-transform: uppercase;
-}
-#cssmenu > ul > li > a > span {
-  background: $menu-color;
-  padding: 10px;
-  display: block;
-  font-size: 13px;
-  font-weight: 300;
-}
-#cssmenu > ul > li > a:hover {
-  text-decoration: none;
-}
-
-#cssmenu span.cnt {
-  position: absolute;
-  top: 8px;
-  right: 15px;
-  padding: 0;
-  margin: 0;
-  background: none;
-}
-/* Sub menu */
-#cssmenu ul ul {
-  display: none;
-}
-#cssmenu ul ul li {
-	margin: 0;
-  border-bottom: 1px solid #e0e0e0;
-}
-#cssmenu ul ul a {
-  padding: 20px;
-  display: block;
-  color: $text-color;
-  background: $menu-color;
-  font-size: 13px;
-  cursor: default;
-}
-
-@media screen and (max-width: 992px) {
-	.map {
-		display: none;
-	}
-
-}
 
 @media (min-width: 768px) {
 	.logo-about {
@@ -617,19 +614,11 @@ b {
 		height: 150px;
 	}
 
-	#cssmenu {
-		width: 75%;
-		margin: 0 auto;
-	}
-
 	.instructions {
 		text-align: center;
 	}
 
-	#cssmenu ul ul li {
-		display: inline-block;
-		width: 49%;
-	}
+
 
 	.logo {
 		display: inline-block;
@@ -641,19 +630,8 @@ b {
 		float: left;
 	}
 
-	.tagline {
-		display: inline-block;
-		position: relative;
-		margin: 0 auto;
-		left: 0;
-		right: 0;
-			height: 400px;
-	width: auto;
-	}
 
-	.hero {
-		margin-top: 45px;
-		height: 350px;
-	}
+
+
 
 }
