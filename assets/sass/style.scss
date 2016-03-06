@@ -5,6 +5,7 @@
 
 html {
 	font-size: 18px; /* rem font sizes will be relative to this font */
+	background: black;
 }
 
 body {
@@ -13,15 +14,24 @@ body {
 	background: url('../img/asfalt.png');
 	background-repeat: repeat;
 	color: $text-color;
-	text-shadow: black 1px 1px;
+	text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
 	font-size: 1rem;
 }
 
 
 h5 {
-	font-size: 1.2rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1rem;
 	font-weight: bold;
 	color: $nav-text-color;
+	text-transform: uppercase;
+}
+
+.row.no-pad {
+  margin-right:0;
+  margin-left:0;
 }
 
 nav {
@@ -107,11 +117,13 @@ nav {
 .home-hero {
 	height:100vh !important; /* makes the image take up the whole screen */
 	margin-top: 0 !important;
-	background: url("../img/home-hero-5-darker.png") center center/cover no-repeat;
+	background: url("../img/home-hero-5-darker.png") center right/cover no-repeat;
+	background-color: #403A38; //shows up while the image loads
 }
 
 .menu-hero {
 	background: url("../img/menu-hero.png") center center/cover no-repeat;
+	background-color: #024D6A; //shows up while the image loads
 }
 
 .explore {
@@ -125,17 +137,26 @@ nav {
 		-webkit-transition: all 0.15s;
 		transition: all 0.15s;
 
-		&:hover {
+		&:hover, &:active, &:visited {
 			color: lighten($gradient-pink, 13%);
 			text-decoration: none;
-
 		}
 	}
 }
 
-.row.no-pad {
-  margin-right:0;
-  margin-left:0;
+.logo-about {
+	width: 435px;
+	height: auto;
+}
+
+.instructions {
+	text-align: center;
+	color: lighten($menu-color, 30%);
+
+	i {
+		padding: 0 5px;
+		color: lighten($gradient-pink, 20%);
+	}
 }
 
 #accordion-menu,
@@ -152,6 +173,7 @@ nav {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
   position: relative;
+	text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 }
 
 #accordion-menu a {
@@ -195,24 +217,81 @@ nav {
 #accordion-menu ul ul li {
 	margin: 0;
   border-bottom: 1px solid #e0e0e0;
-	display: inline-block;
-	width: 49%;
 }
 #accordion-menu ul ul a {
-  padding: 20px;
+  padding: 25px;
   display: block;
-  color: $text-color;
+	color: lighten($subtitle-text-color, 22%);
   background: $menu-color;
-  font-size: 13px;
+  font-size: 0.8rem;
   cursor: default;
+
+	i {
+		padding: 0 5px;
+		color: lighten($gradient-pink, 20%);
+		cursor: pointer;
+	}
+
+}
+
+.category-img:before { //allows centering vertically
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.category-img {
+	height: 200px;
+	width: 100%;
+	border-top: 2px solid white;
+	border-bottom: 1px solid white;
+	text-align: center;
+
+	&.appetizers {
+		border-top: 3px solid white;
+		background: url("../img/menu-appetizers.png") center center/cover no-repeat;
+	}
+	&.drinks {
+		background: url("../img/menu-drinks.png") center center/cover no-repeat;
+	}
+	&.salad {
+		background: url("../img/menu-salad.png") center center/cover no-repeat;
+	}
+	&.tapas {
+		background: url("../img/menu-tapas.png") center center/cover no-repeat;
+	}
+	&.yakitori {
+		background: url("../img/menu-yakitori.png") center center/cover no-repeat;
+	}
+	&.dessert {
+		border-bottom: 3px solid white;
+		background: url("../img/menu-dessert.png") center center/cover no-repeat;
+	}
+
+}
+
+.category-label {
+	display: inline-block;
+	vertical-align: middle;
+	width: 200px;
+	padding: 4px 25px;
+	font-family: 'Source Sans Pro';
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+	border: 3px solid white;
 }
 
 footer {
 	margin-top: 100px;
 	padding-bottom: 50px;
+	font-size: 0.8rem;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	overflow: hidden;
+	color: darken($nav-text-color, 15%);
+	text-align: center;
 
 	img {
 		position: absolute;
@@ -224,9 +303,19 @@ footer {
 	.footer-content {
 		margin-top: 25px;
 		border: 3px solid white;
-
+		text-shadow: none;
 		.res {
 			font-size: 0.8rem;
+
+			a {
+				color: $nav-text-color;
+				border-bottom: 1px solid $nav-text-color;
+
+				&:hover {
+					color: darken($nav-text-color, 30%);
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }
@@ -284,6 +373,15 @@ footer {
 
 	#accordion-menu ul ul li {
 		width: 100%;
+	}
+
+	.category-img {
+		height: 100px;
+	}
+
+	.category-label {
+		width: 150;
+		font-size: 1rem;
 	}
 
 }
@@ -473,12 +571,6 @@ b {
 	background-size: cover;
 }
 
-.footer-gradient {
-	width: 100%;
-	height: 10px;
-	margin-bottom: 25px;
-}
-
 
 
 
@@ -487,8 +579,7 @@ b {
 	font-weight: bold;
 	text-transform: uppercase;
 }
-.value {
-}
+
 
 .contact-separator {
 	margin: 30px 10%;
@@ -546,58 +637,11 @@ b {
 
 
 
-.category-img:before { //allows centering vertically
-	content: "";
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
-}
 
-.category-img {
-	background: url("http://placehold.it/700x500");
-	width: 100%;
-	height: 90px;
-	border-top: 1px solid white;
-	border-bottom: 1px solid white;
-	text-align: center;
 
-	&.appetizers {
-		background: url("../img/menu-appetizers.png") no-repeat center center;
-		background-size: cover;
-	}
-	&.drinks {
-		background: url("../img/menu-drinks.png") no-repeat center center;
-		background-size: cover;
-	}
-	&.salad {
-		background: url("../img/menu-salad.png") no-repeat center center;
-		background-size: cover;
-	}
-	&.tapas {
-		background: url("../img/menu-tapas.png") no-repeat center center;
-		background-size: cover;
-	}
-	&.yakitori {
-		background: url("../img/menu-yakitori.png") no-repeat center center;
-		background-size: cover;
-	}
-	&.dessert {
-		background: url("../img/menu-dessert.png") no-repeat center center;
-		background-size: cover;
-	}
 
-}
 
-.category-label {
-	display: inline-block;
-	vertical-align: middle;
-	text-shadow: 1px 1px black;
-	border: 3px solid white;
-	padding: 4px 25px;
-	font-family: helvetica-med;
-	font-size: 120%;
-	width: 150px;
-}
+
 
 
 
@@ -606,29 +650,10 @@ b {
 /* Base Styles */
 
 @media (min-width: 768px) {
-	.logo-about {
-		width: 435px;
-		height: auto;
-	}
-	.category-img {
-		height: 150px;
-	}
-
-	.instructions {
-		text-align: center;
-	}
 
 
 
-	.logo {
-		display: inline-block;
-		margin-left: 20px;
-	}
 
-	.logo img {
-		display: block;
-		float: left;
-	}
 
 
 
