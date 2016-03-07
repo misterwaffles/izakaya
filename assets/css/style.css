@@ -26,10 +26,11 @@ body {
 
 h1 {
   text-transform: uppercase;
-  letter-spacing: 1rem;
-  font-weight: bold;
+  letter-spacing: 5px;
+  font-weight: 400;
   text-shadow: 1px 1px 5px black;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  color: #F1F1F1; }
 
 h3 {
   margin: 7px 0;
@@ -129,7 +130,7 @@ nav {
   background-color: #403A38; }
 
 .menu-hero {
-  background: url("../img/menu-hero.png") center center/cover no-repeat;
+  background: url("../img/menu-hero2.png") center center/cover no-repeat;
   background-color: #024D6A; }
 
 .specials-hero {
@@ -374,7 +375,7 @@ footer {
   text-align: center; }
   .special img {
     border-radius: 50%;
-    border: 5px solid #6A5F5F; }
+    border: 3px solid #6A5F5F; }
 
 @media (max-width: 768px) {
   h1 {
