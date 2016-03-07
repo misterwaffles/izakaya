@@ -24,6 +24,17 @@ body {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   font-size: 1rem; }
 
+h3 {
+  margin: 7px 0;
+  padding: 0;
+  font-size: 1.7rem;
+  width: 100%;
+  color: #FFFFFF;
+  text-shadow: none;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px; }
+
 h5 {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -279,6 +290,8 @@ footer {
     margin-top: 25px;
     border: 3px solid white;
     text-shadow: none; }
+    footer .footer-content a {
+      color: inherit; }
     footer .footer-content .res {
       font-size: 0.8rem; }
       footer .footer-content .res a {
@@ -300,6 +313,31 @@ footer {
   letter-spacing: 1px; }
   .copyright a {
     color: #c3c2c2; }
+
+.about {
+  margin: 30px auto;
+  background: #1C1C1C;
+  padding: 30px 0 50px; }
+  .about .about-content {
+    width: 500px;
+    margin: 0 auto; }
+  .about p {
+    color: #999999;
+    padding: 15px;
+    text-shadow: none; }
+
+.questions-section {
+  padding: 50px;
+  background: url("../img/interior.jpg") center center/cover no-repeat; }
+  .questions-section .white-bg {
+    width: 500px;
+    padding: 10px 30px;
+    text-align: justify;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    text-shadow: none;
+    letter-spacing: 1px; }
 
 @media (max-width: 768px) {
   nav li a {
@@ -349,22 +387,20 @@ footer {
 
   .category-label {
     width: 150;
-    font-size: 1rem; } }
-h2 {
-  color: #F50057;
-  font-family: helvetica-bold, sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 5px;
-  font-size: 0.9rem !important;
-  text-align: center; }
+    font-size: 1rem; }
 
-h3 {
-  text-transform: uppercase;
-  margin: 7px 0;
-  padding: 0;
-  font-size: 20px; }
+  .about .about-content {
+    width: 100%;
+    padding: 0 20px; }
 
+  .about img {
+    width: 300px;
+    height: auto; }
+
+  .questions-section .white-bg {
+    width: 100%;
+    text-align: center;
+    letter-spacing: normal; } }
 .picture-about {
   height: 400px;
   width: 400px;
@@ -379,13 +415,16 @@ h3 {
   height: auto;
   margin: 0 auto; }
 
-.about {
-  margin: 30px auto; }
-  .about h2 {
-    padding: 10px; }
-  .about p {
-    color: #F1F1F1;
-    padding: 15px; }
+h2 {
+  margin: 7px 0;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  width: 100%;
+  color: black;
+  font-style: italic;
+  text-shadow: none;
+  font-weight: 600;
+  text-align: center; }
 
 b {
   color: #F1F1F1; }
