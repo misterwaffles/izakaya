@@ -130,11 +130,12 @@ nav {
   background-color: #403A38; }
 
 .menu-hero {
-  background: url("../img/menu-hero2.png") center center/cover no-repeat;
-  background-color: #024D6A; }
+  background: url("../img/menu-hero-4.png") center bottom/cover no-repeat;
+  background-color: #A44E00; }
 
 .specials-hero {
-  background: url("../img/specials-hero.png") center center/cover no-repeat; }
+  background: url("../img/specials-hero-2.jpg") center center/cover no-repeat;
+  background-color: #C49561; }
 
 .explore {
   position: absolute;
@@ -368,6 +369,8 @@ footer {
   text-align: center; }
 
 .weekly-specials {
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
   color: #b5adad; }
 
@@ -376,6 +379,10 @@ footer {
   .special img {
     border-radius: 50%;
     border: 3px solid #6A5F5F; }
+
+.hero-img {
+  height: 150px;
+  width: auto; }
 
 @media (max-width: 768px) {
   .item-desc {
@@ -449,7 +456,10 @@ footer {
   .questions-section .white-bg {
     width: 100%;
     text-align: center;
-    letter-spacing: normal; } }
+    letter-spacing: normal; }
+
+  .specials-hero {
+    background-position: center; } }
 .picture-about {
   height: 400px;
   width: 400px;

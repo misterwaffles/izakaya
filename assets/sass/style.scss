@@ -144,12 +144,13 @@ nav {
 }
 
 .menu-hero {
-	background: url("../img/menu-hero2.png") center center/cover no-repeat;
-	background-color: #024D6A; //shows up while the image loads
+	background: url("../img/menu-hero-4.png") center bottom/cover no-repeat;
+	background-color: #A44E00; //shows up while the image loads
 }
 
 .specials-hero {
-	background: url("../img/specials-hero.png") center center/cover no-repeat;
+	background: url("../img/specials-hero-2.jpg") center center/cover no-repeat;
+	background-color: #C49561; //shows up while the image loads
 }
 
 .explore {
@@ -450,6 +451,8 @@ footer {
 }
 
 .weekly-specials {
+	max-width: 700px;
+	margin: 0 auto;
 	text-align: center;
 	color: lighten($menu-color, 30%);
 }
@@ -462,8 +465,13 @@ footer {
 	}
 }
 
+.hero-img {
+	height: 150px;
+	width: auto;
+}
+
 @media (max-width: 768px) {
-	
+
 	.item-desc {
 		width: 80%;
 	}
@@ -555,6 +563,10 @@ footer {
 		width: 100%;
 		text-align: center;
 		letter-spacing: normal;
+	}
+
+	.specials-hero {
+		background-position: center;
 	}
 
 }
@@ -687,8 +699,6 @@ b {
 
 
 }
-
-
 
 
 
