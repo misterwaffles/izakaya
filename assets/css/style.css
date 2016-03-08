@@ -133,6 +133,11 @@ nav {
   background: url("../img/menu-hero-4.png") center bottom/cover no-repeat;
   background-color: #A44E00; }
 
+.contact-hero {
+  background: url("../img/contact-hero.png") no-repeat center top;
+  background-size: cover;
+  background-color: #90A4AE; }
+
 .specials-hero {
   background: url("../img/specials-hero-2.jpg") center center/cover no-repeat;
   background-color: #C49561; }
@@ -286,7 +291,7 @@ nav {
 
 footer {
   position: relative;
-  margin-top: 100px;
+  margin-top: 50px;
   padding-bottom: 38px;
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -545,18 +550,48 @@ b {
     float: right;
     margin: 10px; }
 
-.contact {
-  background: url("../img/exterior.jpg") no-repeat center center;
-  background-size: cover; }
+.contact-text {
+  position: relative;
+  max-width: 100%;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 100%; }
+  .contact-text .h2 {
+    font-size: 150%;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+  .contact-text .h3 {
+    font-size: 100%;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    line-height: 150%; }
+  .contact-text a {
+    color: white;
+    font-size: 120%;
+    border: 3px solid white;
+    padding: 5px 10px; }
+  .contact-text .content {
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    line-height: 120%; }
+    .contact-text .content a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 100%;
+      font-weight: bolder;
+      border: none;
+      padding: none; }
+
+.map {
+  width: max-width; }
 
 .contact-content {
-  text-align: center; }
-
-.address a {
-  color: white;
-  font-size: 120%;
-  border: 3px solid white;
-  padding: 5px 10px; }
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px; }
 
 .instructions {
   font-size: 90%; }
