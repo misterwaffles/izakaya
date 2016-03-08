@@ -138,6 +138,13 @@ nav {
 	background-color: #024D6A; //shows up while the image loads
 }
 
+.contact-hero {
+	background: url("../img/contact-hero.png") no-repeat center top;
+	background-size: cover;
+	background-color: #90A4AE;
+
+}
+
 .explore {
 	position: absolute;
 	bottom: 10px;
@@ -324,7 +331,7 @@ nav {
 
 footer {
 	position: relative;
-	margin-top: 100px;
+	margin-top: 50px;
 	padding-bottom: 38px;
 	font-size: 0.8rem;
 	text-transform: uppercase;
@@ -688,25 +695,65 @@ b {
 	}
 }
 
+.contact-text {
+	position: relative;
+	max-width: 100%;
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 100%;
 
+	.h2{
+		font-size: 150%;
+		font-weight: bold;
+		color: $nav-text-color;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
 
+	.h3{
+		font-size: 100%;
+		font-weight: bold;
+		color: $nav-text-color;
+		letter-spacing: 2px;
+		line-height: 150%;
+	}
 
-.contact {
-	background: url("../img/exterior.jpg") no-repeat center center;
-	background-size: cover;
+	a {
+		color: white;
+		font-size:120%;
+		border: 3px solid white;
+		padding: 5px 10px;
+	}
+
+	.content{
+		color: $nav-text-color;
+		letter-spacing: 2px;
+		line-height: 120%;
+
+		a {
+			color: $nav-text-color;
+			text-decoration: none;
+			font-size: 100%;
+			font-weight: bolder;
+			border: none;
+			padding: none;
+		}
+	}
+
 }
+
+
+.map {
+	width: max-width;
+}
+
 .contact-content {
 	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
-.address {
-	a {
-	color: white;
-	font-size:120%;
-	border: 3px solid white;
-	padding: 5px 10px;
-	}
-}
+
 
 
 
