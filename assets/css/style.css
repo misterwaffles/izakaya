@@ -378,6 +378,9 @@ footer {
     border: 3px solid #6A5F5F; }
 
 @media (max-width: 768px) {
+  .item-desc {
+    width: 80%; }
+
   h1 {
     font-size: 1.2rem; }
 
